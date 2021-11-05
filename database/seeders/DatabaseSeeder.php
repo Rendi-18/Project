@@ -42,5 +42,33 @@ class DatabaseSeeder extends Seeder
             'foto' => 'kursi-2.png',
             'body' => ''
         ]);
+
+        Funiture::create([
+            'jenis_id' => 2,
+            'nama' => 'kursi Taman',
+            'foto' => 'kursi-1.png',
+            'body' => ''
+        ]);
+
+        Funiture::create([
+            'jenis_id' => 1,
+            'nama' => 'Rak Meja',
+            'foto' => 'rak-1.png',
+            'body' => ''
+        ]);
+
+        Funiture::create([
+            'jenis_id' => 4,
+            'nama' => 'akuarium',
+            'foto' => 'akuarium-lemari-1.png',
+            'body' => ''
+        ]);
+
+        Funiture::create([
+            'jenis_id' => 1,
+            'nama' => 'Meja Kursi',
+            'foto' => 'meja-kursi-1.png',
+            'body' => ''
+        ]);
     }
 };
