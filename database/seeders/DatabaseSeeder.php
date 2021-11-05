@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Role;
 use App\Models\User;
+use App\Models\Jenis;
+use App\Models\Funiture;
 use App\Models\Role_User;
 use Illuminate\Database\Seeder;
 
@@ -17,43 +19,28 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        Role::create([
-            'name' => 'Anna',
+        Jenis::create([
+            'nama' => 'Meja',
         ]);
 
-        Role::create([
-            'name' => 'Reiner',
+        Jenis::create([
+            'nama' => 'Kursi',
         ]);
 
-        Role::create([
-            'name' => 'Eren',
+        Jenis::create([
+            'nama' => 'Lemari',
         ]);
 
-        User::create([
-            'name' => 'Action',
+        Jenis::create([
+            'nama' => 'Akuarium',
         ]);
 
-        User::create([
-            'name' => 'Romance',
-        ]);
 
-        User::create([
-            'name' => 'Fantasy',
-        ]);
-
-        Role_User::create([
-            'user_id' => 1,
-            'role_id' => 2,
-        ]);
-
-        Role_User::create([
-            'user_id' => 1,
-            'role_id' => 3,
-        ]);
-
-        Role_User::create([
-            'user_id' => 3,
-            'role_id' => 3,
+        Funiture::create([
+            'jenis_id' => 2,
+            'nama' => 'kursi Hitam',
+            'foto' => 'kursi-2.png',
+            'body' => ''
         ]);
     }
-}
+};

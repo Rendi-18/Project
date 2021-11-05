@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Funiture extends Model
+class Jenis extends Model
 {
     use HasFactory;
 
     protected $guarded = ['id'];
 
-    public function jenis()
+    public function funiture()
     {
-        return $this->belongsTo(Jenis::class, 'jenis_id');
+        return $this->hasMany(Funiture::class, 'jenis_id');
     }
 }

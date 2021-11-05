@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Funiture;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FunitureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
+Route::get('/', [FunitureController::class, 'home']);

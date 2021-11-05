@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFunituresTable extends Migration
+class CreateJenisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateFunituresTable extends Migration
      */
     public function up()
     {
-        Schema::create('funitures', function (Blueprint $table) {
+        Schema::create('jenis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('jenis_id');
             $table->string('nama');
-            $table->string('foto');
-            $table->text('body');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateFunituresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('funitures');
+        Schema::dropIfExists('jenis');
     }
 }
